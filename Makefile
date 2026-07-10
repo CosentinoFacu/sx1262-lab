@@ -6,8 +6,8 @@ BAUD ?= 115200
 
 SRC_DIR = firmware/src
 
-TMP = temp/arduino
-SKETCH = $(TMP)/sx1262_lab
+TMP = build/arduino
+SKETCH = $(TMP)/main
 
 
 .PHONY: prepare compile upload monitor clean
@@ -24,10 +24,10 @@ prepare:
 	@echo "=== Preparando sketch temporal ==="
 	@rm -rf $(SKETCH)
 	@mkdir -p $(SKETCH)
-	@cp $(SRC_DIR)/* $(SKETCH)/
-	@mv $(SKETCH)/main.ino $(SKETCH)/sx1262_lab.ino
+	@find firmware/src -name "*.ino" -exec cp {} $(SKETCH) \;
+	@find firmware/src -name "*.cpp" -exec cp {} $(SKETCH) \;
+	@find firmware/src -name "*.h"   -exec cp {} $(SKETCH) \;
 	@echo "Ready"
-
 
 compile:
 	@echo "=== Compilando ==="

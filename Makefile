@@ -43,14 +43,11 @@ upload:
 	--fqbn $(FQBN) \
 	$(SKETCH)
 
-#monitor:
-#	@echo "=== Monitor serie ==="
-#	$(CLI) monitor \
-#	-p $(PORT) \
-#	-c baudrate=$(BAUD)
-
 monitor:
-	picocom -b $(BAUD) $(PORT)
+	@echo "=== Monitor serie ==="
+	$(CLI) monitor \
+	-p $(PORT) \
+	-c baudrate=$(BAUD)
 
 clean: 
 	rm -rf temp

@@ -1,5 +1,5 @@
 #include "uart.h"
-#include "command_core.h"
+#include "command_dispatcher.h"
 
 void setup() {
 
@@ -11,7 +11,7 @@ void loop() {
 
   if(UART::available()){
     String cmd = UART::readLine();
-    String response = COMMAND_CORE::execute(cmd);
+    String response = COMMAND_DISPATCHER::execute(cmd);
     UART::println(response);
   }
   

@@ -1,6 +1,6 @@
-#include "command_core.h"
+#include "command_dispatcher.h"
 
-namespace COMMAND_CORE
+namespace COMMAND_DISPATCHER
 {
 
 String execute(String command)

@@ -1,6 +1,6 @@
-#include "parser.h"
+#include "command_core.h"
 
-namespace PARSER
+namespace COMMAND_CORE
 {
 
 String execute(String command)

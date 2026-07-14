@@ -1,3 +1,4 @@
+#include "xiao_wio_sx1262.h"
 #include "uart.h"
 #include "command_dispatcher.h"
 

@@ -27,6 +27,7 @@ prepare:
 	@find firmware/src -name "*.ino" -exec cp {} $(SKETCH) \;
 	@find firmware/src -name "*.cpp" -exec cp {} $(SKETCH) \;
 	@find firmware/src -name "*.h"   -exec cp {} $(SKETCH) \;
+	@find board -name "*.h"   -exec cp {} $(SKETCH) \;
 	@echo "Ready"
 
 compile:

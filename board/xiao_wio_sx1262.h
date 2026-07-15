@@ -13,6 +13,10 @@ static const uint8_t BOARD_LORA_NSS   = 41;
 static const uint8_t BOARD_LORA_BUSY  = 40;
 static const uint8_t BOARD_LORA_DIO1  = 39;
 static const uint8_t BOARD_LORA_RESET = 42;
-static const uint8_t LORA_RF_SW1      = 38;
+static const uint8_t BOARD_LORA_RF_SW1= 38;
+
+static const uint8_t BOARD_WIO_LED_IN = 48;
+static const uint8_t BOARD_WIO_BTN_IN = 21;
+
 
 #endif

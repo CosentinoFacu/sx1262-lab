@@ -51,4 +51,4 @@ monitor:
 	-c baudrate=$(BAUD)
 
 clean: 
-	rm -rf temp
+	rm -rf build

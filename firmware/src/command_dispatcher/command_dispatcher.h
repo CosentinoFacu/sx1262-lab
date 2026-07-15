@@ -3,9 +3,11 @@
 
 #include <Arduino.h>
 
+#include <RadioLib.h>
+
 namespace COMMAND_DISPATCHER
 {
-    String execute(String command);
+    String execute(SX1262& radio, String command);
 }
 
 #endif
